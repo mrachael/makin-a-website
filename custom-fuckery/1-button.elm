@@ -59,14 +59,11 @@ update msg model =
 view : Model -> Html Msg
 view model =
   div []
-    --[ button [ onClick Decrement ] [ text "-" ]
-    --, div [] [ text (toString (model.count)) ]
-    --, button [ onClick Increment ] [ text "+" ]
     [ div [] [ text "How it be?" ]
     , button [ onClick Okay ] [ text "things are okay" ]
-    , div [] [
-                input  [ placeholder "What to yell?", onInput SetYell] []
-              , button [ onClick Yell ] [ text "YELL" ]
-             ]
+    , div []
+      [ input  [ placeholder "What to yell?", onInput SetYell] []
+      , button [ onClick Yell ] [ text "YELL" ]
+      ]
     , text (model.theSpeak)
     ]
